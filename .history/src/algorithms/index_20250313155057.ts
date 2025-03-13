@@ -43,7 +43,7 @@ export const solve = (
     case 'PP':
       return pp(arrivalTime, burstTime, priorities);
     case 'HRRN':
-      return hrrn(arrivalTime, burstTime);
+      return hrrn(arrivalTime, burstTime, priorities);
     default:
       break;
   }
