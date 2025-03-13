@@ -1,0 +1,1 @@
+npm install --save-dev @types/babel__core @types/babel__generator @types/babel__template @types/graceful-fs
