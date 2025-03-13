@@ -4,7 +4,6 @@ import { srtf } from './srtf';
 import { rr } from './rr';
 import { npp } from './npp';
 import { pp } from './pp';
-import { hrrn } from './hrrn'
 import { AlgoType } from '../components/Input/AlgoSelect';
 
 export type ganttChartInfoType = {
@@ -42,8 +41,6 @@ export const solve = (
       return npp(arrivalTime, burstTime, priorities);
     case 'PP':
       return pp(arrivalTime, burstTime, priorities);
-    case 'HRRN':
-      return hrrn(arrivalTime, burstTime);
     default:
       break;
   }

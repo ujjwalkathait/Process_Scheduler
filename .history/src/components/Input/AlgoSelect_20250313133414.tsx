@@ -9,7 +9,7 @@ import styled from 'styled-components';
   RR - Round-Robin
   NPP - Non-preemptive Priority
   PP - Preemptive Priority
-  HRRN - Highest Response Ratio Next
+  HRRN - Highest Response Ratio
 */
 export type AlgoType = 'FCFS' | 'SJF' | 'SRTF' | 'RR' | 'NPP' | 'PP' | 'HRRN';
 export type OptionType = {
