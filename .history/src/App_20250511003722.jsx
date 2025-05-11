@@ -4,13 +4,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { CompareAlgorithmsChart, GanttChart, GanttChartTable, ProcessData, ProcessTable, PerformanceMetrics, SelectAlgorithm, Statistics } from './components';
 
 function App() {
-  const [arrivalTime, setArrivalTime] = useState();
-  const [burstTime, setBurstTime] = useState();
+  const [arrivalTime, setArrivalTime] = useState(0);
+  const [burstTime, setBurstTime] = useState(0);
   const [processId, setProcessID] = useState(1);
   const [processes, setProcesses] = useState([]);
   const [newProcesses, setUpdatedProcesses] = useState([]);
   const [selectedAlgorithm, setSelectedAlgorithm] = useState(0);
-  const [priority, setPriority] = useState();
+  const [priority, setPriority] = useState(0);
   const [executed, setExecuted] = useState(false);
   const [statisticsData, setStatisticsData] = useState([]);
   const [updatedProcesses, setAnotherUpatedProcesses] = useState([]);
@@ -19,15 +19,9 @@ function App() {
   
   // Function to delete a process by processId
   const onDeleteProcess = (processIdToDelete) => {
-    setProcesses(prevProcesses => {
-      const updated = prevProcesses
-        .filter(process => process.processId !== processIdToDelete)
-        .map((process, index) => ({
-          ...process,
-          processId: index + 1 // Renumbering
-        }));
-      return updated;
-    });
+    setProcesses(prevProcesses =>
+      prevProcesses.filter(process => process.processId !== processIdToDelete)
+    );
   };
 
   // Function to reset processes
@@ -72,10 +66,11 @@ function App() {
           selectedAlgorithm={selectedAlgorithm}
           processes={processes}
           onDeleteProcess={onDeleteProcess}
+          onDeleteProcess={onDeleteProcess}
           onReset={onReset}
         />
       </div>
-      {/* <div className='w-full bg-white my-10 flex flex-row gap-5 h-[46%]'>
+      <div className='w-full bg-white my-10 flex flex-row gap-5 h-[46%]'>
         <GanttChartTable 
           selectedAlgorithm={selectedAlgorithm}
           processes={newProcesses}
@@ -108,7 +103,7 @@ function App() {
         }
         </div> : ''
         
-      } */}
+      }
     </div>
   );
 }

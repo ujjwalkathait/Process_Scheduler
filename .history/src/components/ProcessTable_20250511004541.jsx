@@ -30,7 +30,7 @@ const ProcessTable = ({ selectedAlgorithm, processes, onDeleteProcess, onReset }
         <tbody>
             {processes.map((process, index) => (
             <tr key={process.processId} className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">P{index+1}</td>
+                <td className="border border-gray-300 px-4 py-2">P{process.processId}</td>
                 <td className="border border-gray-300 px-4 py-2">{process.arrivalTime}</td>
                 <td className="border border-gray-300 px-4 py-2">{process.burstTime}</td>
                 {usesPriority && (
