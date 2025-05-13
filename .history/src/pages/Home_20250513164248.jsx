@@ -17,7 +17,6 @@ export default function Home() {
     setPriority,
     setExecuted,
     setStatisticsData,
-    setSelectedAlgorithm,
     setUpdatedProcesses,
     setAnotherUpdatedProcesses
   } = useContext(ProcessContext);

@@ -30,7 +30,6 @@ export default function Result() {
           executed={executed}
         />
       </div>
-      <div className='w-full bg-white my-10 flex flex-row gap-5'>
         <Statistics 
           selectedAlgorithm={selectedAlgorithm}
           processes={processes}

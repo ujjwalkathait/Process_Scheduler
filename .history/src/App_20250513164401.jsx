@@ -11,6 +11,7 @@ function App() {
   
   return (
     <ProcessProvider>
+
       <Router>
         <div className="overflow-x-hidden mx-[5%] mb-[1rem]">
           <nav className="flex justify-center gap-8 p-4 bg-slate-100 rounded-lg">
@@ -27,6 +28,42 @@ function App() {
         </div>
       </Router>
     </ProcessProvider>
+
+    //   <div className='w-full bg-white my-10 flex flex-row gap-5 h-[46%]'>
+    //     <GanttChartTable 
+    //       selectedAlgorithm={selectedAlgorithm}
+    //       processes={newProcesses}
+    //       executed={executed}
+    //     />
+    //     <PerformanceMetrics 
+    //       selectedAlgorithm={selectedAlgorithm}
+    //       processes={processes}
+    //       executed={executed}
+    //     />
+    //   </div>
+      
+    //   {executed ? 
+    //     <div className='w-full bg-white my-10 flex flex-row gap-5'>
+    //       <Statistics 
+    //         selectedAlgorithm={selectedAlgorithm}
+    //         processes={processes}
+    //         setProcesses={setProcesses}
+    //         executed={executed}
+    //       /> 
+    //       <GanttChart 
+    //         processes={isNonPreemptive ? newProcesses : updatedProcesses}
+    //         executed={executed}
+    //         selectedAlgorithm={selectedAlgorithm}
+    //       />
+    //       {executed ? 
+    //     <CompareAlgorithmsChart
+    //       metrics={statisticsData}
+    //     /> : ''
+    //     }
+    //     </div> : ''
+        
+    //   }
+    // </div>
   );
 }
 

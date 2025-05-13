@@ -17,29 +17,30 @@ export default function Home() {
     setPriority,
     setExecuted,
     setStatisticsData,
-    setSelectedAlgorithm,
     setUpdatedProcesses,
     setAnotherUpdatedProcesses
   } = useContext(ProcessContext);
 
   const onDeleteProcess = (processIdToDelete) => {
-    setProcesses(prevProcesses => {
-      const updated = prevProcesses
-        .filter(process => process.processId !== processIdToDelete)
-        .map((process, index) => ({
-          ...process,
-          processId: index + 1
-        }));
-      return updated;
-    });
-  };
-
-  const onReset = () => {
-    setExecuted(false);
-    setProcesses([]); 
-    setProcessID(1);
-    setStatisticsData([]);
-  }
+      setProcesses(prevProcesses => {
+        const updated = prevProcesses
+          .filter(process => process.processId !== processIdToDelete)
+          .map((process, index) => ({
+            ...process,
+            processId: index + 1 // Renumbering
+          }));
+        return updated;
+      });
+    };
+  
+    // Function to reset processes
+    const onReset = () => {
+      // reseting processes
+      setExecuted(false);
+      setProcesses([]); 
+      setProcessID(1);
+      setStatisticsData([]);
+    }
 
   return (
     <div className="w-full bg-white my-6 flex flex-row gap-10">

@@ -17,7 +17,6 @@ export default function Home() {
     setPriority,
     setExecuted,
     setStatisticsData,
-    setSelectedAlgorithm,
     setUpdatedProcesses,
     setAnotherUpdatedProcesses
   } = useContext(ProcessContext);
@@ -35,6 +34,7 @@ export default function Home() {
   };
 
   const onReset = () => {
+    // reseting processes
     setExecuted(false);
     setProcesses([]); 
     setProcessID(1);
