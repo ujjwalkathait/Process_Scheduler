@@ -17,7 +17,6 @@ export default function Home() {
     setPriority,
     setExecuted,
     setStatisticsData,
-    setSelectedAlgorithm,
     setUpdatedProcesses,
     setAnotherUpdatedProcesses
   } = useContext(ProcessContext);
@@ -28,13 +27,15 @@ export default function Home() {
         .filter(process => process.processId !== processIdToDelete)
         .map((process, index) => ({
           ...process,
-          processId: index + 1
+          processId: index + 1 // Renumbering
         }));
       return updated;
     });
   };
 
+  // Function to reset processes
   const onReset = () => {
+    // reseting processes
     setExecuted(false);
     setProcesses([]); 
     setProcessID(1);

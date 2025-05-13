@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { SelectAlgorithm, ProcessData, ProcessTable } from '../components';
-import { ProcessContext } from '../context/ProcessContext';
 
 export default function Home() {
   const {
@@ -17,29 +16,23 @@ export default function Home() {
     setPriority,
     setExecuted,
     setStatisticsData,
-    setSelectedAlgorithm,
     setUpdatedProcesses,
     setAnotherUpdatedProcesses
   } = useContext(ProcessContext);
 
-  const onDeleteProcess = (processIdToDelete) => {
-    setProcesses(prevProcesses => {
-      const updated = prevProcesses
-        .filter(process => process.processId !== processIdToDelete)
-        .map((process, index) => ({
-          ...process,
-          processId: index + 1
-        }));
-      return updated;
-    });
+  const onDeleteProcess = id => {
+    setProcesses(prev =>
+      prev.filter(p => p.processId !== id)
+        .map((p, idx) => ({ ...p, processId: idx + 1 }))
+    );
   };
 
   const onReset = () => {
-    setExecuted(false);
-    setProcesses([]); 
+    setProcesses([]);
     setProcessID(1);
+    setExecuted(false);
     setStatisticsData([]);
-  }
+  };
 
   return (
     <div className="w-full bg-white my-6 flex flex-row gap-10">
