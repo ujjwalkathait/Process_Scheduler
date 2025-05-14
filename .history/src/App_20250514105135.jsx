@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Result from './pages/Result';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ProcessProvider } from './context/ProcessContext';
-import Simulate from './pages/Simulate';
 
 function App() {
   
@@ -25,8 +24,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/result" element={<Result />} />
             <Route path="/compare" element={<Compare />} />
-            <Route path="/simulate" element={<Simulate />} />
-
           </Routes>
         </div>
       </Router>

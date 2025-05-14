@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CanvasJSChart } from 'canvasjs-react-charts';
 
 const CompareAlgorithmsChart = ({ metrics }) => {
-    const chartRef = useRef(null);
+    const [options, setOptions] = useState(null);
 
     useEffect(() => {
         if (metrics.length > 0) {
@@ -19,7 +19,7 @@ const CompareAlgorithmsChart = ({ metrics }) => {
                 ]
             }));
 
-            const options = {
+            setOptions({
                 theme: "light2",
                 exportEnabled: true,
                 animationEnabled: true,
@@ -41,18 +41,13 @@ const CompareAlgorithmsChart = ({ metrics }) => {
                     cursor: "pointer"
                 },
                 data: dataPoints
-            };
-
-            if (chartRef.current) {
-                chartRef.current.render(options);
-            }
+            });
         }
     }, [metrics]);
-    <CanvasJSChart options={{}} onRef={(ref) => (chartRef.current = ref)} />
 
     return (
         <div className="w-full bg-gray-100 p-4 rounded-xl">
-            
+            {options && <CanvasJSChart options={options} />}
         </div>
     );
 };

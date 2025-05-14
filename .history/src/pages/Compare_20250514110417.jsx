@@ -8,9 +8,10 @@ export default function Compare() {
 
   return (
     <>
-      <div className="w-full bg-white my-10 flex flex-row gap-5">
-        <CompareAlgorithmsChart metrics={statisticsData} />
-      </div>
+    
     </>
+    <div className="w-full bg-white my-10 flex flex-row gap-5">
+      <CompareAlgorithmsChart metrics={statisticsData} />
+    </div>
   );
 }

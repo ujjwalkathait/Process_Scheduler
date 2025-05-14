@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Result from './pages/Result';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ProcessProvider } from './context/ProcessContext';
-import Simulate from './pages/Simulate';
 
 function App() {
   
@@ -18,15 +17,13 @@ function App() {
             <Link to="/" className="font-semibold hover:underline">Home</Link>
             <Link to="/result" className="font-semibold hover:underline">Result</Link>
             <Link to="/compare" className="font-semibold hover:underline">Compare</Link>
-            <Link to="/simulate" className="font-semibold hover:underline">Simulate</Link>
+            <Link to="/simulate" className="font-semibold hover:underline">Compare</Link>
           </nav>
           <ToastContainer />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/result" element={<Result />} />
             <Route path="/compare" element={<Compare />} />
-            <Route path="/simulate" element={<Simulate />} />
-
           </Routes>
         </div>
       </Router>

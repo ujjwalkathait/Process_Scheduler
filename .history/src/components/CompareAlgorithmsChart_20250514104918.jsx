@@ -22,7 +22,7 @@ const CompareAlgorithmsChart = ({ metrics }) => {
             setOptions({
                 theme: "light2",
                 exportEnabled: true,
-                animationEnabled: true,
+                animationEnabled: false,
                 title: {
                     text: "CPU Scheduling Algorithms Comparison",
                     fontFamily: "sans-serif",

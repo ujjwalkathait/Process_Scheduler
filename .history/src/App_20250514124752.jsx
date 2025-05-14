@@ -18,7 +18,7 @@ function App() {
             <Link to="/" className="font-semibold hover:underline">Home</Link>
             <Link to="/result" className="font-semibold hover:underline">Result</Link>
             <Link to="/compare" className="font-semibold hover:underline">Compare</Link>
-            <Link to="/simulate" className="font-semibold hover:underline">Simulate</Link>
+            <Link to="/compare" className="font-semibold hover:underline">Compare</Link>
           </nav>
           <ToastContainer />
           <Routes>
