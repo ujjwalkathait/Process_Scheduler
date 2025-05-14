@@ -38,7 +38,7 @@ const ProcessData = ({processId, arrivalTime, burstTime, priority, processes, se
             </label>
 
            <button 
-                className='bg-green-700 text-[0.9rem] text-center text-white font-bold p-[0.3rem] hover:bg-green-800 focus:outline-none rounded-lg'
+                className='bg-red-700 text-[0.9rem] text-center text-white font-bold p-[0.3rem] hover:bg-green-800 focus:outline-none rounded-lg'
                 type="submit"
                 onClick={e => {
                     e.preventDefault();

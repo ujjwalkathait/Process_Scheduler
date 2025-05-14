@@ -18,14 +18,13 @@ function App() {
             <Link to="/" className="font-semibold hover:underline">Home</Link>
             <Link to="/result" className="font-semibold hover:underline">Result</Link>
             <Link to="/compare" className="font-semibold hover:underline">Compare</Link>
-            <Link to="/simulate" className="font-semibold hover:underline">Simulate</Link>
           </nav>
           <ToastContainer />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/result" element={<Result />} />
             <Route path="/compare" element={<Compare />} />
-            <Route path="/simulate" element={<Simulate />} />
+            {/* <Route path="/simulate" element={<Simulate />} /> */}
 
           </Routes>
         </div>

@@ -11,6 +11,7 @@ export default function Compare() {
       <div className="w-full bg-white my-10 flex flex-row gap-5">
         <CompareAlgorithmsChart metrics={statisticsData} />
       </div>
+    
     </>
   );
 }

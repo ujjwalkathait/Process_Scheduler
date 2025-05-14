@@ -4,7 +4,7 @@ import executeSelectedAlgorithm from '../helpers/ExecuteAlgorithm';
 
 const ProcessData = ({processId, arrivalTime, burstTime, priority, processes, setProcessID, setProcesses, setUpdatedProcesses, setArrivalTime, setBurstTime, setPriority, selectedAlgorithm, setExecuted, setStatisticsData, setAnotherUpatedProcesses}) => {
     let num_of_process = processes.length;
-    const navigate = useNavigate();
+    
   return (
     <div className='flex flex-col w-1/3'>
         <h2 className='text-[1.4rem] mb-3 font-bold'>Process Data</h2>
@@ -55,7 +55,7 @@ const ProcessData = ({processId, arrivalTime, burstTime, priority, processes, se
                 onClick={e => {
                     e.preventDefault();
                     executeSelectedAlgorithm(selectedAlgorithm, num_of_process, processes, setProcesses, setUpdatedProcesses, setExecuted, setStatisticsData, setAnotherUpatedProcesses);
-                    navigate('/simulate');
+
                 }}
             >
                 Simulate

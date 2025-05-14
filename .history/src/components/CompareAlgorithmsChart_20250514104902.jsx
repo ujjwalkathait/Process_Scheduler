@@ -17,7 +17,7 @@ const CompareAlgorithmsChart = ({ metrics }) => {
                     { label: "Average Waiting Time", y: parseFloat(metric.data.average_waiting_time) },
                     { label: "Average Turnaround Time", y: parseFloat(metric.data.average_turnaround_time) }
                 ]
-            }));
+            }));vbv
 
             setOptions({
                 theme: "light2",

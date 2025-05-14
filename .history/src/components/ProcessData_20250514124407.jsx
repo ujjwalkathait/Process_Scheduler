@@ -55,7 +55,7 @@ const ProcessData = ({processId, arrivalTime, burstTime, priority, processes, se
                 onClick={e => {
                     e.preventDefault();
                     executeSelectedAlgorithm(selectedAlgorithm, num_of_process, processes, setProcesses, setUpdatedProcesses, setExecuted, setStatisticsData, setAnotherUpatedProcesses);
-                    navigate('/simulate');
+                    // navigate('/simulate');/
                 }}
             >
                 Simulate

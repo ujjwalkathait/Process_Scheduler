@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@canvasjs/charts": "^3.8.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "@mui/material": "^7.1.0",
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/vite": "^4.0.14",
     "canvasjs": "^1.8.3",
