@@ -26,7 +26,6 @@ export default function Result() {
         />
         <PerformanceMetrics
           selectedAlgorithm={selectedAlgorithm}
-          // processes={processes}
           processes={newProcesses}
           executed={executed}
         />
@@ -34,7 +33,6 @@ export default function Result() {
       <div className='w-full bg-white my-10 flex flex-row gap-5'>
         <Statistics 
           selectedAlgorithm={selectedAlgorithm}
-          // processes={processes}
           processes={newProcesses}
           setProcesses={setProcesses}
           executed={executed}

@@ -27,15 +27,15 @@ export default function Result() {
         <PerformanceMetrics
           selectedAlgorithm={selectedAlgorithm}
           // processes={processes}
-          processes={newProcesses}
+          processes={processes}
           executed={executed}
         />
       </div>
       <div className='w-full bg-white my-10 flex flex-row gap-5'>
         <Statistics 
           selectedAlgorithm={selectedAlgorithm}
-          // processes={processes}
-          processes={newProcesses}
+          processes={processes}
+          processes={processes}
           setProcesses={setProcesses}
           executed={executed}
         />
