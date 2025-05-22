@@ -27,7 +27,7 @@ export default function Result() {
         <PerformanceMetrics
           selectedAlgorithm={selectedAlgorithm}
           // processes={processes}
-          processes={newProcesses}
+          processes={processes}
           executed={executed}
         />
       </div>
@@ -35,7 +35,7 @@ export default function Result() {
         <Statistics 
           selectedAlgorithm={selectedAlgorithm}
           // processes={processes}
-          processes={newProcesses}
+          processes={processes}
           setProcesses={setProcesses}
           executed={executed}
         />

@@ -91,7 +91,7 @@ export default function Simulate() {
           <Statistics 
             selectedAlgorithm={selectedAlgorithm}
             // processes={processes}
-            processes={newProcesses.length ? newProcesses : processes}
+            // processes={newProcesses}
             setProcesses={setProcesses}
             executed={executed}
           />

@@ -90,8 +90,8 @@ export default function Simulate() {
           <CPUStatus status="Idle" algorithm={selectedAlgorithm} />
           <Statistics 
             selectedAlgorithm={selectedAlgorithm}
+            processes={newProcesses}
             // processes={processes}
-            processes={newProcesses.length ? newProcesses : processes}
             setProcesses={setProcesses}
             executed={executed}
           />
