@@ -79,7 +79,7 @@ const ALGORITHMS = [
   { id: 5, name: "STRF", execute: executeSTRF },
   { id: 6, name: "Round Robin", execute: executeRoundRobin },
   { id: 7, name: "MLFQ", execute: executeMultilevelFeedbackQueue },
-].filter(algo => [1,2,3, 4, 5].includes(algo.id)); // compare only FCFS and SJF for now
+].filter(algo => [1,2,3].includes(algo.id)); // compare only FCFS and SJF for now
 
 // Clones process list to keep original unchanged
 const cloneProcesses = (processes) => {
@@ -87,7 +87,6 @@ const cloneProcesses = (processes) => {
 };
 
 const dummySet = () => {};
-const dummySetArray = () => [];
 
 const compareAlgorithms = (processes, setUpdatedProcesses, setProcesses) => {
   const results = [];
@@ -96,22 +95,9 @@ const compareAlgorithms = (processes, setUpdatedProcesses, setProcesses) => {
     const cloned = cloneProcesses(processes);
 
     // Simulate execution of scheduling algorithm
-    // algo.execute(cloned, cloned.length, dummySet);
-
-    if (algo.id > 3) {
-      algo.execute(cloned, cloned.length, dummySet, dummySetArray);
-    } else {
-      algo.execute(cloned, cloned.length, dummySet);
-    }
-
+    algo.execute(cloned, cloned.length, dummySet);
     // Compute metrics like turnaround time, waiting time, etc.
-    // const stats = computeStatistics(algo.id, cloned, dummySet);
-
-    const stats =
-      algo.id > 3
-        ? computeStatistics(algo.id, cloned, dummySetArray)
-        : computeStatistics(algo.id, cloned, dummySet);
-
+    const stats = computeStatistics(algo.id, cloned, dummySet);
     results.push({  ...stats, algorithm: algo.name });
   }
 

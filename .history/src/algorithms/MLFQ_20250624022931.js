@@ -40,7 +40,7 @@ const executeMultilevelFeedbackQueue = (
     num_of_processes,
     setUpdatedProcesses,
     setAnotherUpdatedProcesses,
-    delayRef,
+    
 ) => {
     const NUM_QUEUES = parseInt(prompt("Enter the number of queues:"));
 

@@ -27,7 +27,7 @@ const executePriority = async (
   setUpdatedProcesses,
   setCurrentProcess,
   getPaused,
-  delayRef
+  
 ) => {
   let current_time = 0;
   let completed = 0;
@@ -45,7 +45,7 @@ const executePriority = async (
       .sort((a, b) => a.priority - b.priority); // lower number = higher priority
 
     if (readyQueue.length === 0) {
-      await delay(delayRef.current);
+      await delay(1000);
       current_time++;
       continue;
     }
@@ -58,7 +58,7 @@ const executePriority = async (
     // Execute process fully (non-preemptive)
     while (current.remainingTime > 0) {
       if (getPaused()) await waitWhilePaused(getPaused);
-      await delay(delayRef.current);
+      await delay(1000);
       current.remainingTime--;
       current_time++;
       setUpdatedProcesses([...updated]);

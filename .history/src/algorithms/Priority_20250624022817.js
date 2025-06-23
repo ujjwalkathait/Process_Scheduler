@@ -58,7 +58,7 @@ const executePriority = async (
     // Execute process fully (non-preemptive)
     while (current.remainingTime > 0) {
       if (getPaused()) await waitWhilePaused(getPaused);
-      await delay(delayRef.current);
+      await delay(1000);
       current.remainingTime--;
       current_time++;
       setUpdatedProcesses([...updated]);

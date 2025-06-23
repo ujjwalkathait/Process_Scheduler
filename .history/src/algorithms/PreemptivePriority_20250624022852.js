@@ -156,7 +156,7 @@ const executePreemptivePriority = async (
 
     if (getPaused()) await waitWhilePaused(getPaused);
 
-    await delay(delayRef.current);
+    await delay(1000);
 
     current_process.remainingTime--;
     current_time++;

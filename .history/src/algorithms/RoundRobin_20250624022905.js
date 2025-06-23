@@ -77,7 +77,7 @@ const executeRoundRobin = async (
   setAnotherUpdatedProcesses,
   setCurrentProcess,
   getPaused,
-  delayRef
+  
 ) => {
   const quantum_time = parseInt(prompt("Enter the Quantum Time:"));
   if (isNaN(quantum_time) || quantum_time <= 0 || quantum_time > 10) {
@@ -106,7 +106,7 @@ const executeRoundRobin = async (
     }
 
     if (readyQueue.length === 0) {
-      await delay(delayRef.current);
+      await delay(1000);
       current_time++;
       continue;
     }
@@ -122,7 +122,7 @@ const executeRoundRobin = async (
     const exec_time = Math.min(current_process.remainingTime, quantum_time);
     for (let i = 0; i < exec_time; i++) {
       if (getPaused()) await waitWhilePaused(getPaused);
-      await delay(delayRef.current);
+      await delay(1000);
       current_process.remainingTime--;
       current_time++;
 

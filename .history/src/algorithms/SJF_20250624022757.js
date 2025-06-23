@@ -25,8 +25,7 @@ const executeSJF = async (
   num_of_processes,
   setUpdatedProcesses,
   setCurrentProcess,
-  getPaused, 
-  delayRef
+  getPaused
 ) => {
   let current_time = 0;
 
