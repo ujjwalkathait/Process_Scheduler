@@ -96,6 +96,11 @@ const compareAlgorithms = (processes, setUpdatedProcesses, setProcesses) => {
 
     // Simulate execution of scheduling algorithm
     algo.execute(cloned, cloned.length, dummySet);
+    const name = algo.name;
+
+
+
+
     // Compute metrics like turnaround time, waiting time, etc.
     const stats = computeStatistics(algo.id, cloned, dummySet);
     results.push({  ...stats, algorithm: algo.name });

@@ -55,7 +55,7 @@ const NavigationButtons = ({ onStart, onReset , onAgain}) => {
 
 
       <button
-        className={`reset bg-slate-500 hover:bg-slate-600  font-bold text-[0.9rem] text-center text-white px-[1.4rem] py-[0.4rem] mb-2 rounded-lg focus:outline-none`}
+        className={`reset bg-slate-500 hover:bg-slate-600  font-bold text-[0.9rem] text-center text-white px-[1.4rem] py-[0.4rem] rounded-lg focus:outline-none`}
         type="submit"
         onClick={e => {
             e.preventDefault();

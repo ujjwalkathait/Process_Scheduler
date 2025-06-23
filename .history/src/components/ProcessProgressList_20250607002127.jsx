@@ -26,7 +26,7 @@ const ProcessProgressList = ({processes}) => {
   return (
     <div className="bg-black text-white border-2 rounded-lg p-4 w-full">
       {/* Header Row */}
-      <div className="grid grid-cols-[1fr_4fr_2fr_2fr] gap-2 font-semibold mb-2">
+      <div className="grid grid-cols-[1fr_4fr_2fr_2fr]  gap-2 font-semibold mb-2">
         <div className='text-center'>Processes</div>
         <div className='text-center'>Status Bar</div>
         <div className='text-center'>Remaining Burst Time</div>

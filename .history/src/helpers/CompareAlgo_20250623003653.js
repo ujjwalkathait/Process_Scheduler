@@ -96,9 +96,15 @@ const compareAlgorithms = (processes, setUpdatedProcesses, setProcesses) => {
 
     // Simulate execution of scheduling algorithm
     algo.execute(cloned, cloned.length, dummySet);
+    const name = algo.name;
+
+
+    console.log(`Executing ${name}...`);
+
+
     // Compute metrics like turnaround time, waiting time, etc.
     const stats = computeStatistics(algo.id, cloned, dummySet);
-    results.push({  ...stats, algorithm: algo.name });
+    results.push({  ...stats });
   }
 
   // Sort by best average turnaround time
