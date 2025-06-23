@@ -61,8 +61,7 @@ const executeSTRF = async (
   setUpdatedProcesses,
   setAnotherUpdatedProcesses,
   setCurrentProcess,
-  getPaused,
-  delayRef
+  getPaused
 ) => {
   const updatedProcesses = processes.map(p => ({
     ...p,
@@ -91,7 +90,7 @@ const executeSTRF = async (
 
     if (shortest_remaining_index === -1) {
       setCurrentProcess?.(null);
-      await delay(delayRef.current);
+      await delay(1000);
       current_time++;
       continue;
     }

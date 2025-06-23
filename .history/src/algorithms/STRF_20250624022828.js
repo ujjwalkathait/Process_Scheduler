@@ -61,8 +61,7 @@ const executeSTRF = async (
   setUpdatedProcesses,
   setAnotherUpdatedProcesses,
   setCurrentProcess,
-  getPaused,
-  delayRef
+  getPaused
 ) => {
   const updatedProcesses = processes.map(p => ({
     ...p,

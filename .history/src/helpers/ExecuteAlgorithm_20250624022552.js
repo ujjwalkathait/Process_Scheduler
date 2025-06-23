@@ -43,25 +43,25 @@ const executeSelectedAlgorithm = async (selectedAlgorithm, num_of_processes, pro
             setStatisticsData(prevData => [...prevData, { algorithm: "PRIORITY", data }]);
             break;
         case PREEMPTIVE_PRIORITY:
-            await executePreemptivePriority(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess, getPaused, delayRef);
+            await executePreemptivePriority(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess, getPaused);
             setExecuted(true);
             data = computeStatistics(selectedAlgorithm, processes, setProcesses);
             setStatisticsData(prevData => [...prevData, { algorithm: "PRE_PRIORITY", data }]);
             break;
         case STRF:
-            await executeSTRF(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess, getPaused, delayRef);
+            await executeSTRF(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess, getPaused);
             setExecuted(true);
             data = computeStatistics(selectedAlgorithm, processes, setProcesses);
             setStatisticsData(prevData => [...prevData, { algorithm: "STRF", data }]);
             break;
         case ROUND_ROBIN:
-            await executeRoundRobin(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess, getPaused, delayRef);
+            await executeRoundRobin(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess, getPaused);
             setExecuted(true);
             data = computeStatistics(selectedAlgorithm, processes, setProcesses);
             setStatisticsData(prevData => [...prevData, { algorithm: "ROUND_ROBIN", data }]);
             break;
         case MULTILEVEL_FEEDBACK_QUEUE:
-            executeMultilevelFeedbackQueue(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess, delayRef);
+            executeMultilevelFeedbackQueue(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess);
             setExecuted(true);
             data = computeStatistics(selectedAlgorithm, processes, setProcesses);
             setStatisticsData(prevData => [...prevData, { algorithm: "MLFQ", data }]);

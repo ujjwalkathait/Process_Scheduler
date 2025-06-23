@@ -122,7 +122,7 @@ const executeRoundRobin = async (
     const exec_time = Math.min(current_process.remainingTime, quantum_time);
     for (let i = 0; i < exec_time; i++) {
       if (getPaused()) await waitWhilePaused(getPaused);
-      await delay(delayRef.current);
+      await delay(10delayRef.current00);
       current_process.remainingTime--;
       current_time++;
 

@@ -16,7 +16,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const waitWhilePaused = async (getPaused) => {
   while (getPaused()) {
-    await delay(200);
+    await delay(delayRef.current);
   }
 };
 
@@ -25,8 +25,7 @@ const executeSJF = async (
   num_of_processes,
   setUpdatedProcesses,
   setCurrentProcess,
-  getPaused, 
-  delayRef
+  getPaused
 ) => {
   let current_time = 0;
 

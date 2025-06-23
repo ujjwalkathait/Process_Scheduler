@@ -85,7 +85,7 @@ const executePreemptivePriority = async (
   setAnotherUpdatedProcesses,
   setCurrentProcess,
   getPaused,
-  delayRef
+  setPaused
 ) => {
   const updatedProcesses = processes.map(p => ({
     ...p,
@@ -141,7 +141,7 @@ const executePreemptivePriority = async (
 
     if (highest_priority_index === -1) {
       setCurrentProcess(null);
-      await delay(delayRef.current);
+      await delay(1000);
       current_time++;
       continue;
     }
@@ -156,7 +156,7 @@ const executePreemptivePriority = async (
 
     if (getPaused()) await waitWhilePaused(getPaused);
 
-    await delay(delayRef.current);
+    await delay(1000);
 
     current_process.remainingTime--;
     current_time++;

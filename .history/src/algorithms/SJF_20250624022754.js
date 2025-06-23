@@ -25,8 +25,7 @@ const executeSJF = async (
   num_of_processes,
   setUpdatedProcesses,
   setCurrentProcess,
-  getPaused, 
-  delayRef
+  getPaused
 ) => {
   let current_time = 0;
 
@@ -66,7 +65,7 @@ const executeSJF = async (
 
     while (p.remainingTime > 0) {
       if (getPaused()) await waitWhilePaused(getPaused);
-      await delay(delayRef.current);
+      await delay(1000);
       p.remainingTime--;
       current_time++;
       setUpdatedProcesses([...live]);

@@ -61,7 +61,7 @@ const executeSelectedAlgorithm = async (selectedAlgorithm, num_of_processes, pro
             setStatisticsData(prevData => [...prevData, { algorithm: "ROUND_ROBIN", data }]);
             break;
         case MULTILEVEL_FEEDBACK_QUEUE:
-            executeMultilevelFeedbackQueue(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess, delayRef);
+            executeMultilevelFeedbackQueue(processes, num_of_processes, setUpdatedProcesses, setAnotherUpdatedProcesses, setCurrentProcess);
             setExecuted(true);
             data = computeStatistics(selectedAlgorithm, processes, setProcesses);
             setStatisticsData(prevData => [...prevData, { algorithm: "MLFQ", data }]);
