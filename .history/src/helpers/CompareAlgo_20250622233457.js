@@ -79,7 +79,7 @@ const ALGORITHMS = [
   { id: 5, name: "STRF", execute: executeSTRF },
   { id: 6, name: "Round Robin", execute: executeRoundRobin },
   { id: 7, name: "MLFQ", execute: executeMultilevelFeedbackQueue },
-].filter(algo => [1,2,3].includes(algo.id)); // compare only FCFS and SJF for now
+].filter(algo => [1,2,3,4,5].includes(algo.id)); // compare only FCFS and SJF for now
 
 // Clones process list to keep original unchanged
 const cloneProcesses = (processes) => {
@@ -96,9 +96,10 @@ const compareAlgorithms = (processes, setUpdatedProcesses, setProcesses) => {
 
     // Simulate execution of scheduling algorithm
     algo.execute(cloned, cloned.length, dummySet);
+
     // Compute metrics like turnaround time, waiting time, etc.
     const stats = computeStatistics(algo.id, cloned, dummySet);
-    results.push({  ...stats, algorithm: algo.name });
+    results.push({ algorithm: algo.name, ...stats });
   }
 
   // Sort by best average turnaround time
