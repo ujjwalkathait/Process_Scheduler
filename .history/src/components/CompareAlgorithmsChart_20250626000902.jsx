@@ -177,7 +177,7 @@ const CompareAlgorithmsChart = ({ metrics }) => {
           ))}
         </LineChart>
       </ResponsiveContainer>
-    </div>
+    </div>delete my project
   );
 };
 
