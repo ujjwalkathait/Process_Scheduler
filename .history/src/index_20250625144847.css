@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  transition: background-color 0/53s, color 3s;
+}
+body {
+  @apply bg-white text-black;
+}
+
+/* Dark mode overrides */
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+input[type="number"] {
+  @apply border border-gray-300 rounded-md;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+input[type="radio"] {
+  @apply border border-gray-300 rounded-md;
+  text-align: center;
+  width: 30px;
+  margin-top: 0.7rem;
+}
+
+.simulate {
+  /* background: rgb(49,151,168); */
+  letter-spacing: 0.15rem;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.reset {
+  letter-spacing: 0.08rem;
+  font-weight: 900;
+  font-size: 1rem;
+}
